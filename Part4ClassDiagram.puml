@@ -1,0 +1,41 @@
+@startuml Part4ClassDiagram
+class Instructor{
+    -firstName : String
+    -lastName : String
+    -officeNumber : String
+    +setFirstName(firstName : String) : void
+    +getFirstName() : String
+    +setLastName(lastName : String) : void
+    +getLastName() : String
+    +setOfficeNumber(officeNumber : String) : void
+    +getOfficeNumber() : String
+    +toString() : String 
+}
+
+class Textbook{
+    -title : String
+    -author : String
+    -publisher : String
+    +setTitle(title : String) : void
+    +getTitle() : String
+    +setAuthor(author : String) : void
+    +getAuthor() : String
+    +setPublisher(publisher : String) : void
+    +getPublisher() : String
+    +toString() : String 
+}
+class Course{
+    -name : String
+    -instructors : ArrayList<Instructor>
+    -textbooks : Arraylist<Textbook>
+    +setName(name : String) : void
+    +getName() : String
+    +setInstructor(instructor : Instructor) : void
+    +getInstructor() : ArrayList<Instructor>
+    +setTextbook(textbook : Textbook) : void
+    +getTextbook() : Arraylist<Textbook>
+    +toString() : String 
+}
+Course o-- "2" Instructor : instructor1, instructor2
+Course o-- "2" Textbook : textbook1, textbook2
+@enduml

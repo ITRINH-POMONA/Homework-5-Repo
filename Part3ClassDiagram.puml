@@ -2,7 +2,6 @@
 class Ship{
     #shipName : String 
     #yearBuilt : String 
-    +Ship(shipName, yearBuilt)
     +setShipName(shipName : String) : void
     +getShipName() : String
     +setyearBuilt(yearBuilt : String) : void
@@ -10,15 +9,13 @@ class Ship{
     +toString() : String
 }
 class CruiseShip extends Ship{
-    maxNumberPassengers : int
-    +CruiseShip(name, yearBuilt, maxPassengers : int)
+    -maxNumberPassengers : int
     +setMaxNumberPassengers(maxNumberPassengers : int) : void
     +getMaxNumberPassengers() : int
     +toString() : String
 }
 class CargoShip extends Ship{
-    cargoCapacityInTonnage : int
-    +CargoShip(name, yearBuilt, cargoCapacityInTonnage : int)
+    -cargoCapacityInTonnage : int
     +setcargoCapacityInTonnage(cargoCapacityInTonnage : int) : void
     +getcargoCapacityInTonnage() : int
     +toString() : String
