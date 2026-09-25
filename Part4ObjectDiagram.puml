@@ -1,0 +1,21 @@
+@startuml Part4ObjectDiagram
+object "<u>c:Course</u>" as c{
+    name = "Object-Oriented Programming"
+}
+
+object "<u>ni:Instructor</u>" as ni{
+    firstName = "Nima"
+    lastName = "Davarpanah"
+    officeNumber = "3-2636"
+}
+
+object "<u>cc:Textbook</u>" as cc{
+    title = "Clean Code"
+    author = "Robert C. Martin"
+    publisher = "Prentice Hall"
+}
+
+c --> ni : instructor
+c --> cc : textbook
+
+@enduml

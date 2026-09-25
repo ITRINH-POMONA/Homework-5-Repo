@@ -1,0 +1,25 @@
+@startuml Part3ObjectDiagram
+object "<u>ow:Ship</u>" as ow{
+    name = "Ocean Wanderer"
+    yearBuilt = "1998"
+}
+object "<u>rv:CruiseShip</u>" as rv{
+    name = "Royal Voyager"
+    yearBuilt = "2015"
+    maxNumberPassengers = 3500
+}
+object "<u>af:CargoShip</u>" as af{
+    name = "Atlas Freighter"
+    yearBuilt = "2008"
+    cargoCapacityInTonnage = 12000
+}
+object "<u>ships:Ship[]</u>" as ships{
+    [0] = ow
+    [1] = rv
+    [2] = af
+}
+ships --> ow
+ships --> rv
+ships --> af
+
+@enduml
