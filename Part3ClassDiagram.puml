@@ -1,0 +1,26 @@
+@startuml Part2ClassDiagram
+class Ship{
+    #shipName : String 
+    #yearBuilt : String 
+    +Ship(shipName, yearBuilt)
+    +setShipName(shipName : String) : void
+    +getShipName() : String
+    +setyearBuilt(yearBuilt : String) : void
+    +getYearBuilt() : String
+    +toString() : String
+}
+class CruiseShip extends Ship{
+    maxNumberPassengers : int
+    +CruiseShip(name, yearBuilt, maxPassengers : int)
+    +setMaxNumberPassengers(maxNumberPassengers : int) : void
+    +getMaxNumberPassengers() : int
+    +toString() : String
+}
+class CargoShip extends Ship{
+    cargoCapacityInTonnage : int
+    +CargoShip(name, yearBuilt, cargoCapacityInTonnage : int)
+    +setcargoCapacityInTonnage(cargoCapacityInTonnage : int) : void
+    +getcargoCapacityInTonnage() : int
+    +toString() : String
+}
+@enduml
